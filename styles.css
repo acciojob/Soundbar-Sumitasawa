@@ -1,1 +1,17 @@
 /*  your css code here. If applicable */
+#buttons{
+	background-color:purple;
+	padding:50px;
+	display:flex;
+	justify-content:space-around;
+}
+.btn{
+	border:0px;
+}
+.stop{
+	border:0px;
+}
+button:hover {
+  background: #4b2073;
+  transform: scale(1.1);
+}
