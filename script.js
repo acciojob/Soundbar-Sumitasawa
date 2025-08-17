@@ -11,9 +11,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 		 if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
+			   currentAudio.remove();
       }
-	currentAudio = new Audio(`sounds/${soundFile}`);
-    currentAudio.play();
+			   currentAudio = document.createElement("audio");
+			  currentAudio.src = `sounds/${soundFile}`;
+				      currentAudio.autoplay = true;
+
+			 document.body.appendChild(currentAudio);
 		});
 	});
 
@@ -21,6 +25,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
+      currentAudio.remove();
       currentAudio = null;
     }
   });
