@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 	const buttons=document.querySelectorAll(".btn");
 	const stopButton=document.querySelector(".stop");
 
-	let curentAudio=null;
+	let currentAudio=null;
 	buttons.forEach(button=>{
 		button.addEventListener("click",()=>{
 			const soundFile=button.getAttribute("data-sound");
